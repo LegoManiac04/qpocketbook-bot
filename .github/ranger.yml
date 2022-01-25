@@ -1,7 +1,6 @@
+default:
+  bugs:
+    comment: Thanks for the bug report!
+
 labels:
-  enhancement:
-    comment: 
-      message: 'Thanks for contributing!'
-  bug:
-    comment: 
-      message: 'Thanks for reporting this bug!'
+  'bug': bugs
