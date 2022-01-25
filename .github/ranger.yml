@@ -1,6 +1,13 @@
+
+
 default:
-  comment:
+  e-comment:
     message: 'Thanks for contributing!'
+  b-comment:
+    message: 'Thanks for reporting this bug!'
+
 
 labels:
-  'enhancement': comment
+  'enhancement': e-comment
+  'bug': b-comment
+
