@@ -1,15 +1,6 @@
 
-
-default:
-  contribute:
-    comment:
-      message: 'Thanks for contributing!'
-  bug:
-    comment:
-      message: 'Thanks for reporting this bug!'
-
-
 labels:
-  'enhancement': contribute
-  'bug': bug
-
+  "enhancement":
+    comment: 'Thanks for contributing!'
+  "bug":
+    comment: 'Thanks for reporting this bug!'
