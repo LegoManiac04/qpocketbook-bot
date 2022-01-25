@@ -1,6 +1,6 @@
 default:
-  comment:
+  bugreport:
     message: 'Thanks for the bug report!'
 
 labels:
-  'bug': comment
+  'bug': bugreport
