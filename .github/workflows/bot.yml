@@ -3,6 +3,19 @@ on:
   issues:
     types:
       - labeled
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: Setup git config
+        run: |
+          git config user.name "qbot"
+          git config user.email "<>"
+
 jobs:
   add-comment:
     if: github.event.label.name == 'enhancement'
@@ -10,12 +23,6 @@ jobs:
     permissions:
       issues: write
     steps:
-
-      - name: Setup git config
-        run: |
-          git config user.name "qbot"
-          git config user.email "<>"
-
       - name: Add comment
         uses: peter-evans/create-or-update-comment@a35cf36e5301d70b76f316e867e7788a55a31dae
         with:
