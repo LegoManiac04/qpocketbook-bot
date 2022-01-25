@@ -1,0 +1,6 @@
+default:
+  comment:
+    message: 'Thanks for contributing!'
+
+labels:
+  'enhancement': comment
