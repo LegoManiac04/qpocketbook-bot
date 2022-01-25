@@ -16,7 +16,6 @@ jobs:
           git config user.name "qbot"
           git config user.email "<>"
 
-jobs:
   add-comment:
     if: github.event.label.name == 'enhancement'
     runs-on: ubuntu-latest
