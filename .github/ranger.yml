@@ -1,6 +1,5 @@
-
 labels:
-  "enhancement":
-    comment: 'Thanks for contributing!'
-  "bug":
-    comment: 'Thanks for reporting this bug!'
+  enhancement:
+    comment: Thanks for contributing!
+  bug:
+    comment: Thanks for reporting this bug!
