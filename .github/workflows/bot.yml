@@ -23,5 +23,5 @@ jobs:
         with:
           issue-number: ${{ github.event.issue.number }}
           body: |
-            Thank you for your contribution! :sparkles:
+            Thank you for your bug report! :sparkles:
 
