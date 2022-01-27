@@ -18,7 +18,8 @@ jobs:
           body: |
             Thank you for your contribution! :sparkles:
 
-add-comment:
+jobs:
+  add-comment:
     if: github.event.label.name == 'bug'
     runs-on: ubuntu-latest
     permissions:
