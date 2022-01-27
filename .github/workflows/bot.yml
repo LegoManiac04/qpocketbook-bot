@@ -1,4 +1,4 @@
-name: Add comment
+name: enhancement
 on:
   issues:
     types:
@@ -17,6 +17,15 @@ jobs:
           issue-number: ${{ github.event.issue.number }}
           body: |
             Thank you for your contribution! :sparkles:
+
+name: bug
+on:
+  issues:
+    types:
+      - labeled
+
+jobs:
+  add-comment:
     if: github.event.label.name == 'bug'
     runs-on: ubuntu-latest
     permissions:
