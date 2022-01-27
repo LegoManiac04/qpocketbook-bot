@@ -1,6 +1,0 @@
-default:
-  comment:
-    message: 'Thanks for the bug report!'
-
-labels:
-  'bug': comment
