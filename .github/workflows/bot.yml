@@ -17,9 +17,6 @@ jobs:
           issue-number: ${{ github.event.issue.number }}
           body: |
             Thank you for your contribution! :sparkles:
-
-jobs:
-  add-comment:
     if: github.event.label.name == 'bug'
     runs-on: ubuntu-latest
     permissions:
