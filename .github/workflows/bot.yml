@@ -1,27 +1,21 @@
-name: enhancement
 on:
   issues:
-    types:
+    types: 
       - labeled
 
 jobs:
-  add-comment:
+  comment:
     runs-on: ubuntu-latest
-    permissions:
-      issues: write
     steps:
-      - name: Add contrib
+      - uses: actions/github-script@v5
         if: github.event.label.name == 'enhancement'
-        uses: peter-evans/create-or-update-comment@a35cf36e5301d70b76f316e867e7788a55a31dae
         with:
-          issue-number: ${{ github.event.issue.number }}
-          body: |
-            Thank you for your contribution! :sparkles:
-      - name: Add bug rep
-        if: github.event.label.name == 'bug'
-        uses: peter-evans/create-or-update-comment@a35cf36e5301d70b76f316e867e7788a55a31dae
-        with:
-          issue-number: ${{ github.event.issue.number }}
-          body: |
-            Thank you for your bug report! :sparkles:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '👋 Thanks for reporting!'
+            })
+
 
