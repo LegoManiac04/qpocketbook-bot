@@ -10,7 +10,8 @@ jobs:
       - uses: actions/github-script@v5
         if: github.event.label.name == 'enhancement'
         with:
-          github-token: ${{ secrets.MY_PAT }}
+          app_id: ${{ secrets.BOT_APP_ID }}
+          private_key: ${{ secrets.BOT_PRIVATE_KEY }}169013
           script: |
             github.rest.issues.createComment({
               issue_number: context.issue.number,
