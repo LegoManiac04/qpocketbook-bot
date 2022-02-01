@@ -10,8 +10,7 @@ jobs:
       - uses: actions/github-script@v5
         if: github.event.label.name == 'enhancement'
         with:
-          app_id: ${{ secrets.BOT_APP_ID }}
-          private_key: ${{ secrets.BOT_PRIVATE_KEY }}
+          github-token: ${{ secrets.MY_PAT }}
           script: |
             github.rest.issues.createComment({
               issue_number: context.issue.number,
@@ -30,4 +29,3 @@ jobs:
               repo: context.repo.repo,
               body: '👋 Thanks for the report!'
             })
-
